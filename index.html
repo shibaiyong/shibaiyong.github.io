@@ -4,13 +4,7 @@
 	<meta charset="UTF-8" />
 	<title>GrowingIo</title>
 
-	<script type='text/javascript'>
-		!function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.giocdn.com/2.1/gio.js","gio");
-		gio('init','983830151421f0c5', {});
-		
-		gio('send');
 	
-	</script>
 
 
 </head>
@@ -44,4 +38,19 @@
 	</li>
 </ul>
 </body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script type='text/javascript'>
+	!function(e,t,n,g,i){e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},n=t.createElement("script"),tag=t.getElementsByTagName("script")[0],n.async=1,n.src=('https:'==document.location.protocol?'https://':'http://')+g,tag.parentNode.insertBefore(n,tag)}(window,document,"script","assets.giocdn.com/2.1/gio.js","gio");
+	gio('init','983830151421f0c5', {});
+
+	$('ul li').click(function(){
+		var that = $(this) 
+		gio('track', 'bankclick', { 
+			bankname:that.find('a').text()
+		})
+	})
+	
+	gio('send');
+
+</script>
 </html>
