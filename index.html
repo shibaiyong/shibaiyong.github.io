@@ -44,7 +44,8 @@
 	gio('init','983830151421f0c5', {});
 
 	$('ul li').click(function(){
-		var that = $(this) 
+		var that = $(this)
+		console.log(that.find('a').text())
 		gio('track', 'bankclick', { 
 			bankname:that.find('a').text()
 		})
